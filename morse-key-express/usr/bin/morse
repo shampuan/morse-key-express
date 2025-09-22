@@ -1,0 +1,17 @@
+#!/bin/bash
+
+# Programın çalıştığı dizine git
+cd "$(dirname "$0")"
+
+# Gerekli bağımlılıkları kontrol et ve pip ile kur
+pip_packages="simpleaudio numpy PyQt5"
+
+for package in $pip_packages; do
+    if ! python3 -c "import $package" &> /dev/null; then
+        echo "Eksik bağımlılık tespit edildi: $package. Yükleniyor..."
+        sudo pip3 install "$package"
+    fi
+done
+
+# Ana Python dosyasını çalıştır
+python3 morse.py

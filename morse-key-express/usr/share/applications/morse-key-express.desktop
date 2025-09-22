@@ -1,0 +1,9 @@
+[Desktop Entry]
+Name=Morse Key Express
+Comment=A desktop application that translates text to Morse code signals and plays them with synchronized visuals.
+Exec=/usr/share/morse-key-express/morse.py
+Icon=morseicon
+Terminal=false
+Type=Application
+Categories=Education;Utility;
+
